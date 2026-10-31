@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Gallery</title>
+</head>
+<body>
+
+
+  <div class="header ">
+    <img width="50px" height="50px" src="https://img.icons8.com/bubbles/100/tooth.png" alt="tooth" class="icon1"/>
+    <h1> belleville dental care </h1>   
+</div>
+
+<div class="transparentbg" style="position: relative;">
+        
+<nav class="navbar navbar-expand-lg navbar-dark on-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/logo.png" class="nav-logo" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us </a>
+        </li>
+
+        
+        <li class="nav-item">
+          <a class="nav-link" href="Our Specialist.html"> Our Specialist  </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="patient education.html">Patient Education </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="professional education.html"> Professional Education </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Products</a>
+        </li>
+
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="gallery.html"> gallery  </a></li>
+            <li><a class="dropdown-item" href="contact.html">Contact Us </a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="queries.html">queries </a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+   <div class="visitor-counter">
+      <i class="fas fa-eye "></i>
+      Visitors: <span id="visitor-count">9761</span>
+     </div>
+</nav>     
+</div>
+
+
+
+<!-- HERO -->
+<section id="gal-hero">
+  <div class="container">
+    <div class="eyebrow" style="color:#dbeaf9;">Take a Look Inside</div>
+    <h1>Our Clinic Gallery</h1>
+    <p>A closer look at our clinic, our team, and the care we provide every day.</p>
+  </div>
+</section>
+ 
+<!-- GALLERY GRID -->
+<section id="gal-grid">
+  <div class="container" data-aos="zoom-out-up" data-aos-delay="200" >
+    <div class="row g-4" id="galleryRow">
+ 
+      <div class="col-6 col-md-4 gal-col" data-category="clinic">
+        <div class="gal-item" data-bs-toggle="modal" data-bs-target="#galModal" data-img="assets/images/clinic_reception.jfif">
+
+          <img src="assets/images/clinic_reception.jfif" alt="Clinic Reception">
+          <div class="gal-zoom-icon"><i class="fas fa-search-plus"></i></div>
+          <div class="gal-overlay">
+            <div class="gal-overlay-text">
+              <h4>Clinic Reception</h4>
+              <span>Clinic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="col-6 col-md-4 gal-col" data-category="team">
+        <div class="gal-item" data-bs-toggle="modal" data-bs-target="#galModal" data-img="assets/images/dr.ahmed.jfif">
+          <img src="assets/images/dr.ahmed.jfif" alt="Doctor with patient">
+          <div class="gal-zoom-icon"><i class="fas fa-search-plus"></i></div>
+          <div class="gal-overlay">
+            <div class="gal-overlay-text">
+              <h4>Patient Care</h4>
+              <span>Our Team</span>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="col-6 col-md-4 gal-col" data-category="equipment">
+        <div class="gal-item" data-bs-toggle="modal" data-bs-target="#galModal" data-img="assets/images/G modernequip.jfif">
+          <img src="assets/images/G modernequip.jfif" alt="Dental equipment">
+          <div class="gal-zoom-icon"><i class="fas fa-search-plus"></i></div>
+          <div class="gal-overlay">
+            <div class="gal-overlay-text">
+              <h4>Modern Equipment</h4>
+              <span>Equipment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="col-6 col-md-4 gal-col" data-category="treatment">
+        <div class="gal-item" data-bs-toggle="modal" data-bs-target="#galModal" data-img="assets/images/dr with P.jfif">
+          <img src="assets/images/dr with P.jfif" alt="Dental treatment in progress">
+          <div class="gal-zoom-icon"><i class="fas fa-search-plus"></i></div>
+          <div class="gal-overlay">
+            <div class="gal-overlay-text">
+              <h4>Routine Checkup</h4>
+              <span>Treatments</span>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="col-6 col-md-4 gal-col" data-category="clinic">
+        <div class="gal-item" data-bs-toggle="modal" data-bs-target="#galModal" data-img="assets/images/clinic Interior.jfif">
+          <img src="assets/images/clinic Interior.jfif" alt="Clinic hallway">
+          <div class="gal-zoom-icon"><i class="fas fa-search-plus"></i></div>
+          <div class="gal-overlay">
+            <div class="gal-overlay-text">
+              <h4>Clinic Interior</h4>
+              <span>Clinic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="col-6 col-md-4 gal-col" data-category="team">
+        <div class="gal-item" data-bs-toggle="modal" data-bs-target="#galModal" data-img="assets/images/dr3.jfif">
+          <img src="assets/images/dr3.jfif" alt="Dentist portrait">
+          <div class="gal-zoom-icon"><i class="fas fa-search-plus"></i></div>
+          <div class="gal-overlay">
+            <div class="gal-overlay-text">
+              <h4>Meet Our Dentists</h4>
+              <span>Our Team</span>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="col-6 col-md-4 gal-col" data-category="equipment">
+        <div class="gal-item" data-bs-toggle="modal" data-bs-target="#galModal" data-img="assets/images/care.jfif">
+          <img src="assets/images/care.jfif" alt="Dental tools">
+          <div class="gal-zoom-icon"><i class="fas fa-search-plus"></i></div>
+          <div class="gal-overlay">
+            <div class="gal-overlay-text">
+              <h4>Sterilized Tools</h4>
+              <span>Equipment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="col-6 col-md-4 gal-col" data-category="treatment">
+        <div class="gal-item" data-bs-toggle="modal" data-bs-target="#galModal" data-img="assets/images/results.jfif">
+          <img src="assets/images/results.jfif" alt="Smiling patient">
+          <div class="gal-zoom-icon"><i class="fas fa-search-plus"></i></div>
+          <div class="gal-overlay">
+            <div class="gal-overlay-text">
+              <h4>Happy Results</h4>
+              <span>Treatments</span>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="col-6 col-md-4 gal-col" data-category="clinic">
+        <div class="gal-item" data-bs-toggle="modal" data-bs-target="#galModal" data-img="assets/images/waitingarea.jpg">
+          <img src="assets/images/waitingarea.jpg" alt="Waiting area">
+          <div class="gal-zoom-icon"><i class="fas fa-search-plus"></i></div>
+          <div class="gal-overlay">
+            <div class="gal-overlay-text">
+              <h4>Waiting Area</h4>
+              <span>Clinic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+</section>
+ 
+<!-- LIGHTBOX MODAL -->
+<div class="modal fade" id="galModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0 position-absolute" style="right:0; z-index:10;">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img id="galModalImg" src="" alt="Gallery preview">
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<!-- CTA -->
+<section id="sp-cta">
+  <div class="container">
+    <h2>Have Any Questions?</h2>
+    <p>If you have any questions about our treatments, products, services, or dental care, we're here to help.</p>
+    <button class="btn btn-primary">
+      <a href="queries.html">Ask Your Query
+        </a>
+      </button>
+  </div>
+</section>
+
+
+<!-- ======FOOTER === -->
+<footer class="dental-footer">
+
+    <div class="footer-container">
+
+        <!-- Logo & Clinic Info -->
+        <div class="footer-brand">
+            <img src="assets/images/logo.png" alt="Belleville Dental Clinic Logo">
+
+            <h2>Belleville Dental Clinic</h2>
+
+            <p>
+                Professional, comfortable and reliable dental care
+                for you and your family.
+            </p>
+
+            <p class="footer-tagline">
+                Healthy Smiles • Brighter Futures
+            </p>
+        </div>
+
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+
+            <div class="links-grid">
+
+                <div>
+                    <a href="index.html">› Home</a>
+                    <a href="about.html">› About Us</a>
+                    <a href="Our Specialist.html">› Our Specialists</a>
+                    <a href="patient education.html">› Patient Education</a>
+                    <a href="professional education.html">
+                        › Professional Education
+                    </a>
+                </div>
+
+                <div>
+                    <a href="products.html">› Products</a>
+                    <a href="gallery.html">› Gallery</a>
+                    <a href="contact.html">› Contact Us</a>
+                    <a href="queries.html">› Queries</a>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Contact Information -->
+        <div class="footer-contact">
+            <h3>Get In Touch</h3>
+
+            <p>📍 near victoria avenue , Canada</p>
+
+            <p>📞 +92 3700 018080 </p>
+
+            <p>✉️ info@bellevilledental.com</p>
+
+            <p>🕐 Mon – Sat: 9:00 AM – 8:00 PM</p>
+        </div>
+
+
+        <!-- Social Media -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+
+            <div class="social-icons">
+
+                <a href="#" aria-label="Facebook">f</a>
+
+                <a href="#" aria-label="Instagram">◎</a>
+
+                <a href="#" aria-label="LinkedIn">in</a>
+
+                <a href="#" aria-label="YouTube">▶</a>
+
+            </div>
+
+            <p>
+                Better Oral Health<br>
+                for a Brighter Tomorrow
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Belleville Dental Clinic. All Rights Reserved.
+        </p>
+
+        <div>
+            <a href="privacy.html">Privacy Policy</a>
+            <span>|</span>
+            <a href="terms.html">Terms & Conditions</a>
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script>
+  // Lightbox image loader
+  const galModal = document.getElementById('galModal');
+  galModal.addEventListener('show.bs.modal', function (event) {
+    const trigger = event.relatedTarget;
+    const imgSrc = trigger.getAttribute('data-img');
+    document.getElementById('galModalImg').src = imgSrc;
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

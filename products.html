@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Title</title>
+
+
+  <style>
+    #products-heading {
+      text-align: center;
+      padding: 60px 20px 10px;
+      background: linear-gradient(135deg, #0a4b8c 0%, #1367c4 60%, #2e8bf0 100%);
+      color: #ffffff;
+    }
+
+    #products-heading .eyebrow {
+      color: #eaeef4;
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    #products-heading h2 {
+      color: #eaeef4;
+      font-weight: 700;
+      margin: 10px 0 12px;
+    }
+
+    #products-heading p {
+      color: #eaeef4;
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ===== FILTER / SORT BAR ===== */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      padding: 30px 20px 10px;
+
+    }
+
+    .filter-bar .filter-group {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .filter-bar label {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #0a2540;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .filter-bar select {
+      appearance: none;
+      -webkit-appearance: none;
+      background: #ffffff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%231367c4' d='M1 1l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 16px center;
+      border: 1px solid #e3ecf5;
+      color: #0a2540;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 11px 40px 11px 18px;
+      border-radius: 30px;
+      min-width: 200px;
+      cursor: pointer;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .filter-bar select:hover {
+      border-color: #cfe2f7;
+    }
+
+    .filter-bar select:focus {
+      outline: none;
+      border-color: #1367c4;
+      box-shadow: 0 0 0 3px rgba(19, 103, 196, 0.15);
+    }
+
+
+    .product-card {
+      width: 320px;
+      background: #ffffff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+      transition: 0.3s ease;
+      margin-top: 80px;
+      margin-left: 50px;
+
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 10px 10px 10px rgba(9, 137, 228, 0.688);
+
+    }
+
+
+    .product-image {
+      width: 100%;
+      height: 230px;
+      overflow: hidden;
+      background: #f5faff;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 20px;
+      transition: 0.4s ease;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.08);
+    }
+
+
+
+    .product-content {
+      padding: 22px;
+    }
+
+    .product-category {
+      display: inline-block;
+      background: #e8f7ff;
+      color: #1688b5;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .product-content h3 {
+      font-size: 22px;
+      margin: 5px 0 10px;
+      color: #17324d;
+    }
+
+    .product-content p {
+      color: #777;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+
+
+    .product-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .product-price {
+      font-size: 19px;
+      font-weight: 700;
+      color: #1688b5;
+    }
+
+    .buy-btn {
+      border: none;
+      background: #1688b5;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .buy-btn:hover {
+      background: #116b8f;
+      transform: scale(1.05);
+    }
+
+
+    .pro {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header ">
+    <img width="50px" height="50px" src="https://img.icons8.com/bubbles/100/tooth.png" alt="tooth" class="icon1" />
+    <h1> belleville dental care </h1>
+  </div>
+
+  <div class="transparentbg" style="position: relative">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/logo.png" class="nav-logo" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us </a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link" href="Our Specialist.html"> Our Specialist </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Patient Education </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="professional education.html"> Professional Education </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                More
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="gallery.html"> gallery </a></li>
+                <li><a class="dropdown-item" href="contact.html">Contact Us </a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="queries.html">queries </a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+      <div class="visitor-counter">
+        <i class="fas fa-eye "></i>
+        Visitors: <span id="visitor-count">9761</span>
+      </div>
+    </nav>
+  </div>
+
+  <section id="products-heading">
+    <div class="eyebrow mt-5">Shop With Us</div>
+    <h2>Our Dental Care Products</h2>
+    <p>Quality oral care essentials recommended by our specialists...</p>
+  </section>
+
+
+
+
+
+
+  <div class="filter-bar">
+    <div class="filter-group">
+      <label for="productsFilter">Category</label>
+      <select onchange="filtration(this.value)" id="productsFilter">
+        <option value="All">All</option>
+        <option value="Toothpaste">Toothpaste</option>
+        <option value="Kids">Kids Products</option>
+        <option value="Oral Care">Oral Care</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="productsSort">Sort By</label>
+      <select onchange="sortProducts(this.value)" id="productsSort">
+        <option value="All">Default</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+      </select>
+    </div>
+  </div>
+
+
+
+
+
+  <section class="pro" id="product"></section>
+
+  <script src="products.js"></script>
+
+
+  <!-- CTA -->
+  <section id="sp-cta">
+    <div class="container">
+      <h2>Explore Our Clinic</h2>
+      <p>You've explored our products. Now take a look inside our clinic and discover our environment, facilities, and
+        dental care experience.</p>
+      <button class="btn btn-primary"> <a href="gallery.html"> Clinic asthetics
+        </a>
+      </button>
+    </div>
+  </section>
+
+
+  <!-- ======FOOTER === -->
+  <footer class="dental-footer">
+
+    <div class="footer-container">
+
+      <!-- Logo & Clinic Info -->
+      <div class="footer-brand">
+        <img src="assets/images/logo.png" alt="Belleville Dental Clinic Logo">
+
+        <h2>Belleville Dental Clinic</h2>
+
+        <p>
+          Professional, comfortable and reliable dental care
+          for you and your family.
+        </p>
+
+        <p class="footer-tagline">
+          Healthy Smiles • Brighter Futures
+        </p>
+      </div>
+
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+
+        <div class="links-grid">
+
+          <div>
+            <a href="index.html">› Home</a>
+            <a href="about.html">› About Us</a>
+            <a href="Our Specialist.html">› Our Specialists</a>
+            <a href="patient education.html">› Patient Education</a>
+            <a href="professional education.html">
+              › Professional Education
+            </a>
+          </div>
+
+          <div>
+            <a href="products.html">› Products</a>
+            <a href="gallery.html">› Gallery</a>
+            <a href="contact.html">› Contact Us</a>
+            <a href="queries.html">› Queries</a>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Contact Information -->
+      <div class="footer-contact">
+        <h3>Get In Touch</h3>
+
+        <p>📍 near victoria avenue , Canada</p>
+
+        <p>📞 +92 3700 018080 </p>
+
+        <p>✉️ info@bellevilledental.com</p>
+
+        <p>🕐 Mon – Sat: 9:00 AM – 8:00 PM</p>
+      </div>
+
+
+      <!-- Social Media -->
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+
+        <div class="social-icons">
+
+          <a href="#" aria-label="Facebook">f</a>
+
+          <a href="#" aria-label="Instagram">◎</a>
+
+          <a href="#" aria-label="LinkedIn">in</a>
+
+          <a href="#" aria-label="YouTube">▶</a>
+
+        </div>
+
+        <p>
+          Better Oral Health<br>
+          for a Brighter Tomorrow
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 Belleville Dental Clinic. All Rights Reserved.
+      </p>
+
+      <div>
+        <a href="privacy.html">Privacy Policy</a>
+        <span>|</span>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

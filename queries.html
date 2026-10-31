@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href=" style.css">
+<title>gallery preview</title>
+</head>
+<body>
+
+
+    <div class="header ">
+    <img width="50px" height="50px" src="https://img.icons8.com/bubbles/100/tooth.png" alt="tooth" class="icon1"/>
+    <h1> belleville dental care </h1>   
+</div>
+
+<div class="transparentbg" style="position: relative;">
+        
+<nav class="navbar navbar-expand-lg navbar-dark on-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/logo.png" class="nav-logo" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us </a>
+        </li>
+
+        
+        <li class="nav-item">
+          <a class="nav-link" href="Our Specialist.html"> Our Specialist  </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="patient education.html">Patient Education </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="professional education.html"> Professional Education </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Products</a>
+        </li>
+
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="gallery.html"> gallery  </a></li>
+            <li><a class="dropdown-item" href="contact.html">Contact Us </a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="queries.html">queries </a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+   <div class="visitor-counter">
+      <i class="fas fa-eye "></i>
+      Visitors: <span id="visitor-count">9761</span>
+     </div>
+</nav>     
+</div>
+
+    <section id="q-hero">
+  <div class="container">
+    <div class="eyebrow" style="color:#dbeaf9;">Ask Us Anything</div>
+    <h1>Patient Queries</h1>
+    <p>Have a question about a treatment, appointment, or dental concern? Submit your query below or browse answers from other patients.</p>
+  </div>
+</section>
+ 
+<!-- SUBMIT QUERY FORM -->
+<section id="q-form-section">
+  <div class="container">
+    <div class="row g-5">
+ 
+      <div class="col-lg-7">
+        <div class="q-form-box">
+          <h2>Submit a Query</h2>
+          <p class="sub">Fill in the form below and our team will respond within 24 hours.</p>
+ 
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label>Full Name</label>
+                <input type="text" class="form-control" placeholder="Your name">
+              </div>
+              <div class="col-md-6">
+                <label>Email Address</label>
+                <input type="email" class="form-control" placeholder="you@example.com">
+              </div>
+              <div class="col-12">
+                <label>Query Category</label>
+                <select class="form-select">
+                  <option>General Question</option>
+                  <option>Appointment / Scheduling</option>
+                  <option>Treatment Concern</option>
+                  <option>Billing & Payment</option>
+                  <option>Emergency</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label>Your Query</label>
+                <textarea class="form-control" rows="5" placeholder="Type your question here..."></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-submit">Submit Query</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+ 
+      <div class="col-lg-5" data-aos="zoom-in-left" data-aos-delay="200" >
+        <div class="q-side">
+          <h3>Before You Ask</h3>
+ 
+          <div class="q-point">
+            <div class="q-point-icon"><i class="fas fa-search"></i></div>
+            <div>
+              <h4>Check Common Queries</h4>
+              <p>Your question may already be answered below — take a quick look first.</p>
+            </div>
+          </div>
+ 
+          <div class="q-point">
+            <div class="q-point-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Response Time</h4>
+              <p>We aim to respond to all submitted queries within 24 hours.</p>
+            </div>
+          </div>
+ 
+          <div class="q-point">
+            <div class="q-point-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h4>Urgent Concern?</h4>
+              <p>For dental emergencies, please call us directly instead of submitting a query.</p>
+            </div>
+          </div>
+ 
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+</section>
+ 
+<!-- BROWSE QUERIES -->
+<section id="q-browse">
+  <div class="container text-center" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
+    <div class="eyebrow">Browse Answers</div>
+    <h2 class="mb-3">Common Patient Queries</h2>
+    <p class="lead-text mb-4 mx-auto" style="max-width:650px;">Take a look at questions other patients have asked, organized by category.</p>
+ 
+    <div class="q-search">
+      <div class="input-group">
+        <span class="input-group-text"><i class="fas fa-search"></i></span>
+        <input type="search" class="form-control" placeholder="Search queries...">
+      </div>
+    </div>
+ 
+ 
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-start">
+ 
+        <div class="q-item" data-category="appointment" data-aos="fade-up">
+          <span class="q-tag">Appointments</span>
+          <h4>How do I reschedule my appointment?</h4>
+          <p>You can reschedule by calling our front desk or using the contact form on our website at least 24 hours in advance.</p>
+        </div>
+ 
+        <div class="q-item" data-category="general" data-aos="fade-up" data-aos-delay="100">
+          <span class="q-tag">General</span>
+          <h4>Do you treat children?</h4>
+          <p>Yes, our pediatric dentist specializes in gentle, friendly care designed specifically for young patients.</p>
+        </div>
+ 
+        <div class="q-item" data-category="treatment"  data-aos="fade-up" data-aos-delay="100">
+          <span class="q-tag">Treatment</span>
+          <h4>Is teeth whitening safe?</h4>
+          <p>When performed by a professional using approved methods, teeth whitening is considered safe for most patients.</p>
+        </div>
+ 
+        <div class="q-item" data-category="billing"  data-aos="fade-up" data-aos-delay="100" >
+          <span class="q-tag">Billing</span>
+          <h4>Do you accept insurance?</h4>
+          <p>We accept a range of insurance providers. Please contact our front desk to confirm coverage before your visit.</p>
+        </div>
+ 
+        <div class="q-item" data-category="treatment"  data-aos="fade-up" data-aos-delay="100">
+          <span class="q-tag">Treatment</span>
+          <h4>How painful is a root canal treatment?</h4>
+          <p>Modern root canal treatment is performed under local anesthesia and is generally no more uncomfortable than a filling.</p>
+        </div>
+ 
+        <div class="q-item" data-category="appointment" data-aos="fade-up" data-aos-delay="100">
+          <span class="q-tag">Appointments</span>
+          <h4>What should I bring to my first visit?</h4>
+          <p>Please bring a valid ID, any previous dental records if available, and your insurance card if applicable.</p>
+        </div>
+ 
+        <div class="q-item" data-category="general"  data-aos="fade-up" data-aos-delay="100">
+          <span class="q-tag">General</span>
+          <h4>How often should I get a dental checkup?</h4>
+          <p>We recommend a routine checkup and cleaning every six months for most patients.</p>
+        </div>
+ 
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- CTA -->
+<section id="sp-cta">
+  <div class="container">
+    <h2>Still have a question?</h2>
+    <p>Our team is happy to help with anything not covered above.</p>
+    <button class="btn btn-primary">
+        <a href="contact.html">Contact & Book Your Appointment
+            </a>
+        </button>
+  </div>
+</section>
+
+
+
+<!-- ======FOOTER === -->
+<footer class="dental-footer">
+
+    <div class="footer-container">
+
+        <!-- Logo & Clinic Info -->
+        <div class="footer-brand">
+            <img src="assets/images/logo.png" alt="Belleville Dental Clinic Logo">
+
+            <h2>Belleville Dental Clinic</h2>
+
+            <p>
+                Professional, comfortable and reliable dental care
+                for you and your family.
+            </p>
+
+            <p class="footer-tagline">
+                Healthy Smiles • Brighter Futures
+            </p>
+        </div>
+
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+
+            <div class="links-grid">
+
+                <div>
+                    <a href="index.html">› Home</a>
+                    <a href="about.html">› About Us</a>
+                    <a href="Our Specialist.html">› Our Specialists</a>
+                    <a href="patient education.html">› Patient Education</a>
+                    <a href="professional education.html">
+                        › Professional Education
+                    </a>
+                </div>
+
+                <div>
+                    <a href="products.html">› Products</a>
+                    <a href="gallery.html">› Gallery</a>
+                    <a href="contact.html">› Contact Us</a>
+                    <a href="queries.html">› Queries</a>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Contact Information -->
+        <div class="footer-contact">
+            <h3>Get In Touch</h3>
+
+            <p>📍 near victoria avenue , Canada</p>
+
+            <p>📞 +92 3700 018080 </p>
+
+            <p>✉️ info@bellevilledental.com</p>
+
+            <p>🕐 Mon – Sat: 9:00 AM – 8:00 PM</p>
+        </div>
+
+
+        <!-- Social Media -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+
+            <div class="social-icons">
+
+                <a href="#" aria-label="Facebook">f</a>
+
+                <a href="#" aria-label="Instagram">◎</a>
+
+                <a href="#" aria-label="LinkedIn">in</a>
+
+                <a href="#" aria-label="YouTube">▶</a>
+
+            </div>
+
+            <p>
+                Better Oral Health<br>
+                for a Brighter Tomorrow
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Belleville Dental Clinic. All Rights Reserved.
+        </p>
+
+        <div>
+            <a href="privacy.html">Privacy Policy</a>
+            <span>|</span>
+            <a href="terms.html">Terms & Conditions</a>
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
